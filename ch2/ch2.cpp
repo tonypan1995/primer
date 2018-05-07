@@ -71,5 +71,13 @@ int main(){
     const int *const p3 = &i8;
     //p2 = p3; // ERROR. Low-level const not ignored.
     std::cout << *p3 << std::endl;
+
+    // ex2.37
+    int a=3, b=4;
+    decltype(a) c=a;
+    decltype(a=b) d2=a;
+    std::cout << a << b << c << d2 << std::endl;
+    //std::cout << __cplusplus<<std::endl;
+    
     return 0;
 }
